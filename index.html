@@ -38,13 +38,14 @@
         lastResult = decodedText;
         // Handle on success condition with the decoded message.
         console.log(`Scan result ${decodedText}`, decodedResult);
-        resultContainer.append(decodedText);
+        var p = resultContainer.appendChild('p');
+        p.append(decodedText);
       }
-      html5QrcodeScanner.clear();
+      //html5QrcodeScanner.clear();
     }
 
     var html5QrcodeScanner = new Html5QrcodeScanner(
-      "qr-reader", { fps: 900, qrbox: { width: 210, height: 210 } });
+      "qr-reader", { fps: 100 });
     html5QrcodeScanner.render(onScanSuccess);
   });
 </script>
