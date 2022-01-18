@@ -10,7 +10,7 @@
 
 <body>
   <div>
-    <div id="qr-reader" style="width:300px; margin-right: auto; margin-left: auto;"></div>
+    <div id="qr-reader" style="width:100%; margin-right: auto; margin-left: auto;"></div>
     <div id="qr-reader-results"></div>
   </div>
 
@@ -45,7 +45,7 @@
     }
 
     var html5QrcodeScanner = new Html5QrcodeScanner(
-      "qr-reader", { fps: 100, qrbox: { width: 250, height: 250 } });
+      "qr-reader", { fps: 500 });
     html5QrcodeScanner.render(onScanSuccess);
   });
 </script>
